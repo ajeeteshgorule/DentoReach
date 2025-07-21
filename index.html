@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DentalReach - Digital Marketing Solutions for Dental Practices</title>
+    <meta name="description"
+        content="Grow your dental practice with proven digital marketing strategies. Professional websites, SEO, Google My Business optimization, and automated follow-up systems.">
+    <meta name="keywords"
+        content="dental marketing, dental practice growth, dental SEO, dental websites, dental practice management">
+    <meta name="author" content="DentalReach">
+    <link rel="canonical" href="https://dentalreach.com">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="DentalReach - Digital Marketing Solutions for Dental Practices">
+    <meta property="og:description" content="Grow your dental practice with proven digital marketing strategies.">
+    <meta property="og:url" content="https://dentalreach.com">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DentalReach - Digital Marketing Solutions">
+    <meta name="twitter:description" content="Grow your dental practice with proven digital marketing strategies.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2563eb;
+            text-decoration: none;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: #2563eb;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white !important;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #333;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="grad" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:%23ffffff;stop-opacity:0.1" /><stop offset="100%" style="stop-color:%233b82f6;stop-opacity:0.05" /></radialGradient></defs><circle cx="200" cy="200" r="100" fill="url(%23grad)" /><circle cx="800" cy="300" r="150" fill="url(%23grad)" /><circle cx="600" cy="700" r="80" fill="url(%23grad)" /></svg>') no-repeat center;
+            background-size: cover;
+            opacity: 0.3;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            animation: fadeInLeft 1s ease;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #1e293b, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-title .highlight {
+            color: #3b82f6;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #64748b;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #3b82f6;
+            padding: 1rem 2rem;
+            border: 2px solid #3b82f6;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: #3b82f6;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .stats {
+            display: flex;
+            gap: 3rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1e293b;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .hero-image {
+            position: relative;
+            animation: fadeInRight 1s ease;
+        }
+
+        .hero-mockup {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #ffffff, #f1f5f9);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero-image-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+
+        }
+
+        .hero-image-main {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-image-main:hover {
+            transform: scale(1.05);
+        }
+
+        /* Fallback styling if image doesn't load */
+        .hero-mockup::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            height: 40px;
+            background: #ffffff00;
+            border-radius: 10px;
+            z-index: 1;
+            display: none;
+
+        }
+
+        .hero-mockup::after {
+            content: '';
+            position: absolute;
+            top: 80px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            border-radius: 10px;
+            opacity: 0.1;
+            z-index: 1;
+            display: none;
+
+        }
+
+        /* Hide fallback when image loads */
+        .hero-image-main:not([src=""])~.hero-mockup::before,
+        .hero-image-main:not([src=""])~.hero-mockup::after {
+            display: none;
+        }
+
+        /* Image overlay for better text contrast */
+        .hero-image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(29, 78, 216, 0.05));
+            border-radius: 20px;
+            z-index: 2;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 8rem 0;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #f1f5f9;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .service-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .service-features {
+            list-style: none;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            color: #64748b;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .why-choose-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .why-choose-text {
+            animation: fadeInLeft 0.8s ease;
+        }
+
+        .why-choose-image {
+            position: relative;
+            animation: fadeInRight 0.8s ease;
+        }
+
+        .features-list {
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateX(10px);
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .feature-content h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-content p {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        .mockup-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #ffffff, #f1f5f9);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            animation: float 6s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 8rem 0;
+            background: #ffffff;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .testimonial-card {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        .stars {
+            color: #fbbf24;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .author-info h4 {
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 0.2rem;
+        }
+
+        .author-info p {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, #1e293b, #3b82f6);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="grad2" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:%23ffffff;stop-opacity:0.1" /><stop offset="100%" style="stop-color:%23ffffff;stop-opacity:0" /></radialGradient></defs><circle cx="100" cy="100" r="80" fill="url(%23grad2)" /><circle cx="900" cy="200" r="120" fill="url(%23grad2)" /><circle cx="200" cy="800" r="100" fill="url(%23grad2)" /></svg>') no-repeat center;
+            background-size: cover;
+            opacity: 0.3;
+        }
+
+        .cta-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-text {
+            animation: fadeInLeft 0.8s ease;
+        }
+
+        .cta-form {
+            animation: fadeInRight 0.8s ease;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .cta-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .cta-features {
+            list-style: none;
+        }
+
+        .cta-features li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .form-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .form-submit {
+            width: 100%;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background: #0f172a;
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #3b82f6;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #94a3b8;
+            text-decoration: none;
+            line-height: 1.6;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #3b82f6;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #334155;
+            padding-top: 2rem;
+            text-align: center;
+            color: #64748b;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Scroll Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                font-size: 1.2rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .stats {
+                justify-content: center;
+                gap: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-choose-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .cta-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .cta-title {
+                font-size: 2rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .feature-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .cta-title {
+                font-size: 1.8rem;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero-buttons {
+                width: 100%;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">DentalReach</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-choose">Why Choose Us</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="cta-btn">Get Free Consultation</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Grow Your <span class="highlight">Dental Practice</span> Online
+                </h1>
+                <p class="hero-subtitle">
+                    We help dental practices attract more patients through proven digital marketing strategies. From SEO
+                    to appointment booking systems, we've got you covered.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary">Start Growing Today</a>
+                    <a href="#services" class="btn-secondary">View Our Work</a>
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Happy Practices</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">Client Retention</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">3x</span>
+                        <span class="stat-label">Average Growth</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-mockup">
+                    <div class="hero-image-container">
+                        <img src="hero-image.webp" alt="Modern dental practice with digital marketing success"
+                            class="hero-image-main" loading="lazy">
+                        <div class="hero-image-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Complete Digital Marketing Solutions</h2>
+                <p class="section-subtitle">
+                    Everything your dental practice needs to succeed online, all in one place
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">🌐</div>
+                    <h3 class="service-title">Professional Websites</h3>
+                    <ul class="service-features">
+                        <li>Custom-designed, mobile responsive websites</li>
+                        <li>Professional content that builds credibility</li>
+                        <li>User-friendly interface</li>
+                        <li>Fast loading servers</li>
+                        <li>SEO optimized templates</li>
+                        <li>Professional photography</li>
+                    </ul>
+                </div>
+
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">🔍</div>
+                    <h3 class="service-title">Search Engine Optimization</h3>
+                    <ul class="service-features">
+                        <li>Rank higher on Google and attract more local patients searching for dental services</li>
+                        <li>Local SEO optimization</li>
+                        <li>Keyword research & targeting</li>
+                        <li>Content optimization</li>
+                        <li>Monthly performance reports</li>
+                    </ul>
+                </div>
+
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">🏢</div>
+                    <h3 class="service-title">Google My Business</h3>
+                    <ul class="service-features">
+                        <li>Optimize your Google listing to appear in local searches and attract more patients</li>
+                        <li>Local listing optimization</li>
+                        <li>Review management</li>
+                        <li>Local search ranking</li>
+                        <li>Monthly posting & updates</li>
+                    </ul>
+                </div>
+
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">📅</div>
+                    <h3 class="service-title">Online Booking System</h3>
+                    <ul class="service-features">
+                        <li>Allow patients to schedule appointments online</li>
+                        <li>Simple appointment scheduling</li>
+                        <li>Integrated with your practice management</li>
+                        <li>Patient and follow integration</li>
+                        <li>Cancellation management</li>
+                    </ul>
+                </div>
+
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">✉️</div>
+                    <h3 class="service-title">Automated Follow-up</h3>
+                    <ul class="service-features">
+                        <li>Keep patients engaged with automated follow-up</li>
+                        <li>SMS Campaigns that drive retention and referrals</li>
+                        <li>Automated email marketing</li>
+                        <li>Review & follow-up integration</li>
+                        <li>Reminder & feedback messages</li>
+                        <li>Personalized campaigns</li>
+                    </ul>
+                </div>
+
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">📊</div>
+                    <h3 class="service-title">Analytics & Reporting</h3>
+                    <ul class="service-features">
+                        <li>Track your marketing performance with detailed</li>
+                        <li>analytics and monthly reports</li>
+                        <li>Website traffic analysis</li>
+                        <li>Conversion tracking</li>
+                        <li>ROI measurement</li>
+                        <li>Monthly strategy calls</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose" id="why-choose">
+        <div class="container">
+            <div class="why-choose-content">
+                <div class="why-choose-text">
+                    <h2 class="section-title animate-on-scroll">Why Dental Practices Choose DentalReach</h2>
+                    <p class="section-subtitle animate-on-scroll">
+                        We understand the unique challenges of marketing dental services and have the expertise to help
+                        you succeed.
+                    </p>
+
+                    <div class="features-list">
+                        <div class="feature-item animate-on-scroll">
+                            <div class="feature-icon">🏆</div>
+                            <div class="feature-content">
+                                <h3>Dental Industry Expertise</h3>
+                                <p>We specialize exclusively in dental marketing, understanding HIPAA compliance,
+                                    patient psychology, and industry regulations.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item animate-on-scroll">
+                            <div class="feature-icon">📈</div>
+                            <div class="feature-content">
+                                <h3>Proven Results</h3>
+                                <p>Our clients see an average 300% increase in new patient inquiries within the first 6
+                                    months of our service.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item animate-on-scroll">
+                            <div class="feature-icon">🎯</div>
+                            <div class="feature-content">
+                                <h3>All-in-One Solution</h3>
+                                <p>From website design to patient follow-up systems, we handle everything from website
+                                    design to patient retention.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item animate-on-scroll">
+                            <div class="feature-icon">💬</div>
+                            <div class="feature-content">
+                                <h3>Dedicated Support</h3>
+                                <p>Your dedicated account manager provides personalized service and regular strategy
+                                    sessions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="why-choose-image">
+                    <div class="mockup-image animate-on-scroll"> <img src="growth.webp"
+                            alt="Modern dental practice with digital marketing success" class="hero-image-main"
+                            loading="lazy"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Real results from real dental practices</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "DentalReach transformed our online presence. We've seen a 400% increase in new patient
+                        inquiries, and our online booking system has made scheduling so much easier for our patients and
+                        staff."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MO</div>
+                        <div class="author-info">
+                            <h4>Dr. Michael Chen</h4>
+                            <p>Chen Family Dentistry</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "The automated follow-up system has been a game-changer. Our patient retention has improved by
+                        45%, and we're getting more reviews than ever before. Great for our largest keywords to just 4."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SJ</div>
+                        <div class="author-info">
+                            <h4>Dr. Sarah Johnson</h4>
+                            <p>Bright Smile Dental</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Working with DentalReach has been outstanding. They understand the dental industry like no
+                        other marketing company. Great for our largest keywords to just 4."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RM</div>
+                        <div class="author-info">
+                            <h4>Dr. Robert Martinez</h4>
+                            <p>Martinez Dental Care</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2 class="cta-title animate-on-scroll">Ready to Grow Your Practice?</h2>
+                    <p class="cta-subtitle animate-on-scroll">
+                        Get a free consultation and discover how we can help you attract more patients and grow your
+                        dental practice.
+                    </p>
+
+                    <ul class="cta-features animate-on-scroll">
+                        <li>Free 30-minute consultation</li>
+                        <li>Custom marketing strategy</li>
+                        <li>No long-term contracts</li>
+                        <li>Results-driven approach</li>
+                        <li>Dedicated account manager</li>
+                    </ul>
+                </div>
+
+                <div class="cta-form">
+                    <div class="form-container animate-on-scroll">
+                        <h3 class="form-title">Get Your Free Consultation</h3>
+                        <form
+      id="consultationForm"
+      action="https://script.google.com/macros/s/AKfycbyrN9dJAWMaoYS9nJ20Kf7V8_OyTh4S9LMPCdqBaPyMHaFRxv3NXZDHjsBQaikAHxzK8g/exec"
+      method="POST"
+      target="hidden_iframe"
+    >
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Full Name" required />
+      </div>
+
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Email" required />
+      </div>
+
+      <div class="form-group">
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+      </div>
+
+      <div class="form-group">
+        <input type="text" name="practice" placeholder="Your Dental Practice Name" />
+      </div>
+
+      <div class="form-group">
+        <textarea
+          name="message"
+          placeholder="Tell us about your marketing challenges. What would you like to achieve?"
+          rows="4"
+        ></textarea>
+      </div>
+
+      <button type="submit" class="form-submit">Get My Free Consultation</button>
+    </form>
+
+    <iframe
+      name="hidden_iframe"
+      id="hidden_iframe"
+      style="display: none;"
+      onload="if (submitted) {
+        document.getElementById('consultationForm').reset();
+        document.getElementById('responseMessage').style.display = 'block';
+      }"
+    ></iframe>
+
+    <!-- <div id="responseMessage" class="message success">
+      ✅ Thank you! Your message has been sent successfully.
+    </div>
+  </div> -->
+
+  <!-- <script>
+    let submitted = false;
+    document
+      .getElementById("consultationForm")
+      .addEventListener("submit", function () {
+        submitted = true;
+      });
+  </script> -->
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DentalReach</h3>
+                    <p>Helping dental practices grow their online presence and attract more patients through proven
+                        digital marketing strategies.</p>
+                    <p style="margin-top: 1rem;">
+                        Email: hello@dentalreach.com<br>
+                        Phone: 1-800-DENTAL-1
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#services">Professional Websites</a></li>
+                        <li><a href="#services">Search Engine Optimization</a></li>
+                        <li><a href="#services">Google My Business</a></li>
+                        <li><a href="#services">Online Booking System</a></li>
+                        <li><a href="#services">Automated Follow-up</a></li>
+                        <li><a href="#services">Analytics & Reporting</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#why-choose">About Us</a></li>
+                        <li><a href="#testimonials">Case Studies</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>
+                        123 Marketing Street<br>
+                        Business District<br>
+                        New York, NY 10001<br><br>
+                        Hours: Mon-Fri 9AM-6PM EST<br>
+                        Emergency Support: 24/7
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 DentalReach. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        navLinks.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                navLinks.classList.remove('active');
+            }
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animate-on-scroll class
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Counter animation for stats
+        const animateCounters = () => {
+            const counters = document.querySelectorAll('.stat-number');
+
+            counters.forEach(counter => {
+                const target = counter.textContent;
+                const isPercentage = target.includes('%');
+                const isMultiplier = target.includes('x');
+                const numericValue = parseInt(target.replace(/[^\d]/g, ''));
+
+                let current = 0;
+                const increment = numericValue / 50;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= numericValue) {
+                        current = numericValue;
+                        clearInterval(timer);
+                    }
+
+                    if (isPercentage) {
+                        counter.textContent = Math.floor(current) + '%';
+                    } else if (isMultiplier) {
+                        counter.textContent = Math.floor(current) + 'x';
+                    } else {
+                        counter.textContent = Math.floor(current) + '+';
+                    }
+                }, 50);
+            });
+        };
+
+        // Trigger counter animation when stats section is visible
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        const statsSection = document.querySelector('.stats');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        // document.addEventListener('DOMContentLoaded', function () {
+    const consultationForm = document.getElementById('consultationForm');
+
+    consultationForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Submit the form manually via AJAX
+      const formData = new FormData(consultationForm);
+      fetch(consultationForm.action, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors' // Important for Google Apps Script
+      });
+
+      // Show success message
+      const formContainer = document.querySelector('.form-container');
+      formContainer.innerHTML = `
+        <div style="text-align: center; padding: 2rem;">
+          <div style="font-size: 3rem; margin-bottom: 1rem; color: #10b981;">✓</div>
+          <h3 style="margin-bottom: 1rem;">Thank You!</h3>
+          <p>We've received your request and will contact you within 24 hours to schedule your free consultation.</p>
+          <button onclick="location.reload()" style="margin-top: 2rem; background: #10b981; color: white; border: none; padding: 1rem 2rem; border-radius: 10px; cursor: pointer;">Submit Another Request</button>
+        </div>
+      `;
+
+      // Auto-reload after 5 seconds
+      setTimeout(() => {
+        location.reload();
+      }, 5000);
+    });
+
+        // Add floating animation to service cards
+        const serviceCards = document.querySelectorAll('.service-card');
+        serviceCards.forEach((card, index) => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-15px) rotateY(5deg)';
+                card.style.boxShadow = '0 25px 80px rgba(0, 0, 0, 0.15)';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) rotateY(0deg)';
+                card.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.08)';
+            });
+        });
+
+        // Add parallax effect to hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroMockup = document.querySelector('.hero-mockup');
+            if (heroMockup && scrolled < window.innerHeight) {
+                heroMockup.style.transform = `translateY(${scrolled * 0.3}px)`;
+            }
+        });
+
+        // Testimonial cards hover effect
+        const testimonialCards = document.querySelectorAll('.testimonial-card');
+        testimonialCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Loading animation
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '1';
+            document.body.style.transition = 'opacity 0.5s ease';
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add initial loading state
+            document.body.style.opacity = '0';
+        });
+
+
+     
+    </script>
+</body>
+
+</html>
