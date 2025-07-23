@@ -1,1 +1,5 @@
-https://dentoreach.in/*  https://dentoreach.com/:splat  301!
+# Redirect dentoreach.in to dentoreach.com
+https://dentoreach.in/* https://dentoreach.com/:splat 301!
+http://dentoreach.in/* https://dentoreach.com/:splat 301!
+https://www.dentoreach.in/* https://dentoreach.com/:splat 301!
+http://www.dentoreach.in/* https://dentoreach.com/:splat 301!
