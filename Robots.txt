@@ -1,0 +1,74 @@
+# Robots.txt for dentoreach.com
+# Digital Marketing Solutions for Dental Practices
+
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Block access to sensitive areas
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/themes/
+Disallow: /cgi-bin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /tmp/
+Disallow: /backup/
+Disallow: /backups/
+
+# Block access to client data and internal tools
+Disallow: /client-portal/
+Disallow: /dashboard/
+Disallow: /analytics/
+Disallow: /reports/
+Disallow: /internal/
+
+# Block duplicate content and search/filter pages
+Disallow: /search/
+Disallow: /*?*
+Disallow: /*&*
+Disallow: /tag/
+Disallow: /author/
+Disallow: /date/
+Disallow: /feed/
+Disallow: /trackback/
+
+# Block development and staging areas
+Disallow: /dev/
+Disallow: /test/
+Disallow: /staging/
+Disallow: /beta/
+
+# Block file types that shouldn't be indexed
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.docx$
+Disallow: /*.xls$
+Disallow: /*.xlsx$
+Disallow: /*.ppt$
+Disallow: /*.pptx$
+
+# Allow important marketing pages
+Allow: /services/
+Allow: /case-studies/
+Allow: /blog/
+Allow: /about/
+Allow: /contact/
+Allow: /testimonials/
+Allow: /pricing/
+Allow: /portfolio/
+
+# Allow social media crawlers full access
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://dentoreach.com/sitemap.xml
