@@ -52,19 +52,21 @@
             gap: 2rem;
             align-items: center;
         }
-
+       
         .nav-links a {
             text-decoration: none;
             color: #333;
             font-weight: 500;
             transition: all 0.3s ease;
             position: relative;
-        }
+        } 
 
         .nav-links a:hover {
             color: #2563eb;
             transform: translateY(-2px);
         }
+
+        
 
         .nav-links a::after {
             content: '';
