@@ -309,7 +309,7 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- CTA Section with OTP Form -->
     <section class="cta-section" id="contact">
         <div class="container">
             <div class="cta-content">
@@ -332,54 +332,74 @@
                 <div class="cta-form">
                     <div class="form-container animate-on-scroll">
                         <h3 class="form-title">Get Your Free Consultation</h3>
-                        <form id="consultationForm"
-                            action="https://script.google.com/macros/s/AKfycbyrN9dJAWMaoYS9nJ20Kf7V8_OyTh4S9LMPCdqBaPyMHaFRxv3NXZDHjsBQaikAHxzK8g/exec"
-                            method="POST" target="hidden_iframe">
-                            <div class="form-group">
-                                <input type="text" name="name" placeholder="Full Name" required />
-                            </div>
+                        
+                        <!-- Step 1: Request OTP -->
+                        <div id="step1">
+                            <form id="otpRequestForm">
+                                <div class="form-group">
+                                    <input type="email" id="email" placeholder="Email" required />
+                                    <div class="email-error" id="emailError" style="display: none; color: #dc2626; font-size: 14px; margin-top: 5px;"></div>
+                                </div>
+                                <button type="button" id="sendOtpBtn" class="form-submit" onclick="sendOTP()">
+                                    <span>Send OTP</span>
+                                    <div class="spinner"></div>
+                                </button>
+                            </form>
+                            <div id="msg1" class="message hidden"></div>
+                            <p id="timer" class="timer-text hidden"></p>
+                        </div>
 
-                            <div class="form-group">
-                                <input type="email" name="email" placeholder="Email" required />
-                            </div>
+                        <!-- Step 2: Verify OTP -->
+                        <div id="step2" class="hidden">
+                            <form id="otpVerifyForm">
+                                <div class="form-group">
+                                    <input type="text" id="otp" maxlength="6" placeholder="Enter 6-digit OTP" required />
+                                </div>
+                                <button type="button" class="form-submit" onclick="verifyOTP()">Verify OTP</button>
+                            </form>
+                            <div id="msg2" class="message hidden"></div>
+                            <button type="button" class="back-btn" onclick="goBackToStep1()">← Back to Email</button>
+                        </div>
 
-                            <div class="form-group phone-row">
-                                <select name="countryCode" required>
-                                    <option value="+91">India (+91)</option>
-                                    <option value="+1">USA (+1)</option>
-                                    <option value="+44">UK (+44)</option>
-                                    <option value="+61">Australia (+61)</option>
-                                    <option value="+971">UAE (+971)</option>
-                                    <option value="+49">Germany (+49)</option>
-                                    <option value="+81">Japan (+81)</option>
-                                    <option value="+33">France (+33)</option>
-                                    <option value="+39">Italy (+39)</option>
-                                    <option value="+86">China (+86)</option>
-                                </select>
-                                <input type="tel" name="phone" placeholder="Phone Number" required />
-                            </div>
+                        <!-- Step 3: Contact Form -->
+                        <div id="step3" class="hidden">
+                            <form id="consultationForm">
+                                <div class="form-group">
+                                    <input type="text" id="fullName" placeholder="Full Name" required />
+                                </div>
 
-                            <input type="hidden" name="fullPhone" id="fullPhone" />
+                                <div class="form-group phone-row">
+                                    <select id="countryCode" required>
+                                        <option value="+91">India (+91)</option>
+                                        <option value="+1">USA (+1)</option>
+                                        <option value="+44">UK (+44)</option>
+                                        <option value="+61">Australia (+61)</option>
+                                        <option value="+971">UAE (+971)</option>
+                                        <option value="+49">Germany (+49)</option>
+                                        <option value="+81">Japan (+81)</option>
+                                        <option value="+33">France (+33)</option>
+                                        <option value="+39">Italy (+39)</option>
+                                        <option value="+86">China (+86)</option>
+                                    </select>
+                                    <input type="tel" id="phone" placeholder="Phone Number" required />
+                                </div>
+                                <div class="phone-error" id="phoneError" style="display: none; color: #dc2626; font-size: 14px; margin-top: 5px;"></div>
 
-                            <div class="form-group">
-                                <input type="text" name="practice" placeholder="Your Dental Practice Name" />
-                            </div>
+                                <div class="form-group">
+                                    <input type="text" id="practiceName" placeholder="Your Dental Practice Name" required />
+                                </div>
 
-                            <div class="form-group">
-                                <textarea name="message"
-                                    placeholder="Tell us about your marketing challenges. What would you like to achieve?"
-                                    rows="4"></textarea>
-                            </div>
+                                <div class="form-group">
+                                    <textarea id="message" placeholder="Tell us about your marketing challenges. What would you like to achieve?" rows="4"></textarea>
+                                </div>
 
-                            <button type="submit" class="form-submit">Get My Free Consultation</button>
-                        </form>
-
-                        <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="if (submitted) {
-                            document.getElementById('consultationForm').reset();
-                            document.getElementById('responseMessage').style.display = 'block';}">
-                        </iframe>
-
-
+                                <button type="button" id="submitConsultationBtn" class="form-submit" onclick="saveContact()" disabled>
+                                    <span>Get My Free Consultation</span>
+                                    <div class="spinner"></div>
+                                </button>
+                            </form>
+                            <div id="msg3" class="message hidden"></div>
+                        </div>
 
                     </div>
                 </div>
@@ -418,7 +438,6 @@
                     <ul>
                         <li><a href="#why-choose">About Us</a></li>
                         <li><a href="#testimonials">Case Studies</a></li>
-
                     </ul>
                 </div>
 
@@ -437,6 +456,9 @@
             </div>
         </div>
     </footer>
+
+    <!-- Add OTP Form Styles -->
+
 
     <script src="javascript.js"></script>
 </body>
