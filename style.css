@@ -742,6 +742,13 @@ body {
     border: 1px solid #fecaca;
 }
 
+.note-text {
+    color: #facc15; /* yellow */
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 .timer-text { 
     color: #991b1b; 
     margin-top: 10px; 

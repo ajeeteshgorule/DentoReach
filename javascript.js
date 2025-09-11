@@ -210,6 +210,7 @@ async function sendOTP() {
             msg1.classList.add("success");
             document.getElementById("step1")?.classList.add("hidden");
             document.getElementById("step2")?.classList.remove("hidden");
+            document.getElementById("spamNote")?.classList.remove("hidden"); // Show spam note
             startTimer(btn, timerEl);
         } else {
             msg1.classList.add("error");
@@ -352,6 +353,7 @@ async function saveContact() {
                         <div style="text-align: center; padding: 40px 20px;">
                             <h3 style="color: #f6f6f6ff; margin-bottom: 15px;">🎉 Thank You!</h3>
                             <p style="color: #ffffffff; margin-bottom: 20px;">We've received your consultation request and will contact you within 24 hours.</p>
+                            <p style="color: #facc15; margin-bottom: 30px;">📩 Please also check your Spam folder for the Confirmation email.</p>
                             <button type="button" class="form-submit" onclick="resetForm()" style="max-width: 200px;">Submit Another Request</button>
                         </div>
                     `;
