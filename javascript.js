@@ -5,12 +5,18 @@ const navLinks = document.getElementById('navLinks');
 if (mobileMenuBtn && navLinks) {
     mobileMenuBtn.addEventListener('click', () => {
         navLinks.classList.toggle('active');
+        if (navLinks.classList.contains('active')) {
+            mobileMenuBtn.textContent = '✗';
+        } else {
+            mobileMenuBtn.textContent = '☰';
+        }
     });
 
     // Close mobile menu when clicking on a link
     navLinks.addEventListener('click', (e) => {
         if (e.target.tagName === 'A') {
             navLinks.classList.remove('active');
+            mobileMenuBtn.textContent = '☰';
         }
     });
 }
@@ -142,7 +148,7 @@ function checkFormCompletion() {
     const practiceName = document.getElementById("practiceName")?.value.trim() || "";
     const submitBtn = document.getElementById("submitConsultationBtn");
     
-    if (!submitBtn) return; // Button doesn't exist yet
+    if (!submitBtn) return; // Button a
     
     // Check if all required fields are filled and phone is valid
     const isNameFilled = fullName.length > 0;
